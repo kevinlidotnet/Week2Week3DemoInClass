@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b1c9645-357f-42fc-8a71-569f6447ea37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/FoodMenuTableViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demoinclass/foodMenuTableView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/FoodMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/FoodMenu.java" afterDir="false" />
@@ -20,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -50,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/kevindemo/Week2Week3DemoInClass",
+    "last_opened_file_path": "C:/Users/kli1/OneDrive - Georgian College/Teaching/AdvancedOOP/Week3/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,7 +93,7 @@
       <workItem from="1684190070533" duration="6302000" />
       <workItem from="1684296803908" duration="1314000" />
       <workItem from="1684644340586" duration="20887000" />
-      <workItem from="1685971412489" duration="6184000" />
+      <workItem from="1685971412489" duration="11394000" />
     </task>
     <task id="LOCAL-00001" summary="JDBC codes added">
       <created>1684877192741</created>
@@ -129,9 +129,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java</url>
-          <line>79</line>
+          <line>102</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

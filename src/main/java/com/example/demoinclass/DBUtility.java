@@ -1,46 +1,69 @@
 package com.example.demoinclass;
 
+import javafx.fxml.Initializable;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
 import java.security.SecureRandom;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
 
-public class DBUtility {
+public class DBUtility  {
+
+    //My remote MySQL
     private static String user;
     private static String password;
-    //My remote MySQL
-    //private static String user= DBCredentials.user;
-    //private static String password=DBCredentials.password;
+//    //My remote MySQL
+//    private static String user= DBCredentials.user;
+//    private static String password=DBCredentials.password;
 
     //my local MySQL
     //private static String password="s2023";
     //private static String user="admin";
     private static String connectURL ="jdbc:mysql://sql9.freesqldatabase.com:3306/sql9622349";
 
-    /*
-    * Added configured Credentials
-    * */
-    public DBUtility()
-    {
-        try {
-            String configFilePath = "src/main/resources/config.properties";
-            FileInputStream propsInput = new FileInputStream(configFilePath);
-            Properties prop = new Properties();
-            prop.load(propsInput);
 
-            user=prop.getProperty("DB_USER");
-            password=prop.getProperty("6HX1t2hX7Y");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+
+    /*
+     *Get the foodmenu list for the tableview
+     *  */
+    public static ArrayList<FoodMenu> getFoodMenus()
+    {
+        ArrayList<FoodMenu> foodMenus = new ArrayList<>();
+        //query from the database
+        String sql= "SELECT * FROM sql9622349.foodmenu;";
+        try (
+                Connection connection =DriverManager.getConnection(connectURL,user,password);
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+                ){
+            while(resultSet.next())
+            {
+                String name= resultSet.getString("name");
+                Double price= resultSet.getDouble("price");
+                Integer spicy= resultSet.getInt("spicylevel");
+                Integer calorie= resultSet.getInt("calorie");
+                FoodMenu foodMenu = new FoodMenu(name,price,spicy,calorie);
+                foodMenus.add(foodMenu);
+            }
+
+        }
+        catch (SQLException e){
             e.printStackTrace();
         }
+
+        return  foodMenus;
     }
 
+    /*
+    * Create the sql string to create demo data
+    * */
     public static void creatFoodMenus() {
         //Random number generator
         SecureRandom secureRandom=new SecureRandom();
@@ -102,4 +125,28 @@ public class DBUtility {
 
         return id;
      }
+
+    /*
+     * Added configured Credentials
+     * */
+
+    public static void getCredentials() {
+       // https://niruhan.medium.com/how-to-add-a-config-file-to-a-java-project-99fd9b6cebca
+       try {
+
+            String configFilePath = "src/main/resources/config.properties";
+            FileInputStream propsInput = new FileInputStream(configFilePath);
+            Properties prop = new Properties();
+            prop.load(propsInput);
+
+            user=prop.getProperty("DB_USER");
+            password=prop.getProperty("DB_PASSWORD");
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

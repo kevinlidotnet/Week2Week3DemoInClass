@@ -25,6 +25,13 @@ public class FoodMenu {
         setSpicyLevel(spicyLevel);
     }
 
+    public FoodMenu(String name, Double price, Integer spicy, Integer calorie) {
+        setFoodName(name);
+        setPrice(price);
+        setSpicyLevel(spicy);
+        setCalorie(calorie);
+    }
+
     public int getCalorie()
     {
         return calorie;

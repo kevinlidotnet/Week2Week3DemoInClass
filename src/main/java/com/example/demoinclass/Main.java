@@ -10,16 +10,16 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("createFoodMenu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("foodMenuTableView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 520, 540);
-        stage.setTitle("Create Food Menu");
+        stage.setTitle("Food Menu List");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
 
-        DBUtility.creatFoodMenus();
+        //DBUtility.creatFoodMenus();
 
         launch();
     }
