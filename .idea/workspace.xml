@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b1c9645-357f-42fc-8a71-569f6447ea37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/FoodMenuTableViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demoinclass/foodMenuTableView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/FoodMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/FoodMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +88,7 @@
       <workItem from="1684190070533" duration="6302000" />
       <workItem from="1684296803908" duration="1314000" />
       <workItem from="1684644340586" duration="20887000" />
-      <workItem from="1685971412489" duration="11394000" />
+      <workItem from="1685971412489" duration="12643000" />
     </task>
     <task id="LOCAL-00001" summary="JDBC codes added">
       <created>1684877192741</created>
