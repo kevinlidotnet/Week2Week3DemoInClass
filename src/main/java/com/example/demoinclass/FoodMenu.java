@@ -12,6 +12,8 @@ public class FoodMenu {
     private double price;
     private int spicyLevel;
 
+    private int calorie;
+
     /*
      * Summary: This method is the constructor
      * @param foodName - the name to be assigned
@@ -21,6 +23,15 @@ public class FoodMenu {
         setFoodName(foodName);
         setPrice(price);
         setSpicyLevel(spicyLevel);
+    }
+
+    public int getCalorie()
+    {
+        return calorie;
+    }
+
+    public void setCalorie(int calorie) {
+        this.calorie = calorie;
     }
 
     public String getFoodName() {
