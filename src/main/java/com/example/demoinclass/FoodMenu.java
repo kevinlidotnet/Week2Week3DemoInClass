@@ -11,12 +11,20 @@ public class FoodMenu {
     private String foodName;
     private double price;
     private int spicyLevel;
+    private int calorie;
 
     /*
      * Summary: This method is the constructor
      * @param foodName - the name to be assigned
      *
      * */
+    public FoodMenu(String foodName, double price, int spicyLevel,int calorie) {
+        setFoodName(foodName);
+        setPrice(price);
+        setSpicyLevel(spicyLevel);
+        setCalorie(calorie);
+    }
+
     public FoodMenu(String foodName, double price, int spicyLevel) {
         setFoodName(foodName);
         setPrice(price);
@@ -32,6 +40,15 @@ public class FoodMenu {
             this.foodName = foodName;
         else
             throw new IllegalArgumentException("food name must longer than 2 characters");
+    }
+
+    public int getCalorie()
+    {
+        return calorie;
+    }
+
+    public void setCalorie(int calorie) {
+        this.calorie = calorie;
     }
 
     public double getPrice() {

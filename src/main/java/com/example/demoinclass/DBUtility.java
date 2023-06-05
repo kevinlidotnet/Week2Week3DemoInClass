@@ -1,11 +1,17 @@
 package com.example.demoinclass;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.security.SecureRandom;
 import java.sql.*;
+import java.util.Formatter;
+import java.util.Properties;
 
 public class DBUtility {
     private static String user="admin";
     private static String password="s2023";
-    private static String connectURL ="jdbc:mysql://localhost:3306/foodmenu2023";
+    private static String connectURL ="jdbc:mysql://sql9.freesqldatabase.com:3306/sql9622349";
 
     public static  int insertFoodMenu(FoodMenu foodMenu) throws SQLException {
         ResultSet resultSet =null;
@@ -43,4 +49,52 @@ public class DBUtility {
 
         return id;
      }
+
+
+     /*
+     *
+     * */
+     public static void setCridentials()
+     {
+         try {
+
+             String configFilePath = "src/main/resources/config.properties";
+             FileInputStream propsInput = new FileInputStream(configFilePath);
+             Properties prop = new Properties();
+             prop.load(propsInput);
+
+             user=prop.getProperty("DB_USER");
+             password=prop.getProperty("DB_PASSWORD");
+
+         } catch (FileNotFoundException e) {
+             e.printStackTrace();
+         } catch (IOException e) {
+             e.printStackTrace();
+         }
+     }
+
+     /*
+     * Generate 50 rows in SQL query
+     * */
+    public static void creatFoodMenus(){
+        SecureRandom secureRandom = new SecureRandom();
+        try(Formatter formatter = new Formatter("createSomeItems.sql");)
+        {
+            for (int i = 0; i < 50; i++) {
+              formatter.format(" INSERT INTO `sql9622349`.`foodmenu`\n" +
+                      "(`name`,`price`,`spicylevel`,`calorie`)" +
+                      "VALUES ('Food%d',%.2f, %d,%d);\n" ,
+                      i,
+                      (secureRandom.nextDouble()*40)+5,
+                      secureRandom.nextInt(0,4),
+                      secureRandom.nextInt(100,9000)  ) ;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
 }
