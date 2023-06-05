@@ -1,0 +1,100 @@
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food0',36.47, 0,1854);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food1',14.20, 1,3431);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food2',29.00, 0,5012);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food3',17.04, 1,4447);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food4',42.20, 3,3131);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food5',31.07, 1,5130);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food6',32.94, 0,4749);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food7',27.69, 0,6399);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food8',5.90, 1,2629);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food9',29.92, 2,699);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food10',31.62, 3,5074);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food11',28.48, 2,4874);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food12',35.19, 0,6817);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food13',16.40, 2,7529);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food14',31.59, 0,7602);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food15',16.54, 3,8598);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food16',44.91, 3,4690);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food17',5.74, 3,5662);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food18',22.97, 1,4265);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food19',6.38, 3,6721);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food20',18.96, 1,2457);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food21',27.58, 2,7276);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food22',16.84, 0,5750);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food23',33.76, 2,6586);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food24',44.81, 3,5179);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food25',5.79, 3,587);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food26',25.23, 1,8194);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food27',42.61, 0,708);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food28',12.86, 3,3020);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food29',42.62, 0,5534);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food30',6.95, 3,5425);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food31',26.87, 3,6673);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food32',32.53, 0,297);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food33',40.68, 1,979);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food34',41.80, 0,8894);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food35',41.22, 0,642);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food36',41.10, 0,6625);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food37',16.74, 0,6336);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food38',39.86, 3,3385);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food39',40.97, 0,2081);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food40',33.34, 1,4305);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food41',44.47, 3,2780);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food42',21.62, 2,667);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food43',5.50, 2,4276);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food44',33.47, 3,5318);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food45',38.69, 1,2253);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food46',28.50, 2,3408);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food47',12.77, 3,4515);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food48',9.71, 3,8406);
+ INSERT INTO `sql9622349`.`foodmenu`
+(`name`,`price`,`spicylevel`,`calorie`)VALUES ('Food49',13.97, 1,3178);
