@@ -55,7 +55,7 @@ public class DBUtility {
      /*
      *
      * */
-     public static void setCridentials()
+     public static void configCridentials()
      {
          try {
 

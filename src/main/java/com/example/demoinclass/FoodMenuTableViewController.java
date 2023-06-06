@@ -32,7 +32,7 @@ public class FoodMenuTableViewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        DBUtility.setCridentials();
+        DBUtility.configCridentials();
         try {
             ArrayList<FoodMenu> foodMenus = DBUtility.getFoodMenus();
             foodMenuTableView.getItems().addAll(foodMenus);

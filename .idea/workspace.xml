@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b1c9645-357f-42fc-8a71-569f6447ea37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/FoodMenuTableViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demoinclass/foodMenuTableView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createSomeItems.sql" beforeDir="false" afterPath="$PROJECT_DIR$/createSomeItems.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/DBUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/FoodMenuTableViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoinclass/FoodMenuTableViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686009309260</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Table View and controller class. Working version.">
+      <created>1686011414928</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686011414928</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +113,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JDBC codes added" />
     <MESSAGE value="sql string creating in class" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql string creating in class" />
+    <MESSAGE value="Added Table View and controller class. Working version." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Table View and controller class. Working version." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
