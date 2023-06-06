@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<AnchorPane prefHeight="449.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demoinclass.FoodMenuTableViewController">
+   <children>
+      <BorderPane layoutX="155.0" layoutY="85.0" prefHeight="458.0" prefWidth="702.0" AnchorPane.bottomAnchor="-58.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-102.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Welcome to Tims" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <TableView fx:id="foodMenuTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="colName" prefWidth="232.0" text="C1" />
+                <TableColumn fx:id="colPrice" prefWidth="160.0" text="C2" />
+                  <TableColumn fx:id="colSpicy" prefWidth="124.0" text="C2" />
+                  <TableColumn fx:id="colCalorie" prefWidth="185.0" text="C2" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

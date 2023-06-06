@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Properties;
 
@@ -97,4 +98,31 @@ public class DBUtility {
 
     }
 
+    public static ArrayList<FoodMenu> getFoodMenus() throws SQLException {
+        ArrayList<FoodMenu> foodMenus = new ArrayList<>();
+        String sql="SELECT * FROM sql9622349.foodmenu;";
+        try(
+                Connection connection =DriverManager.getConnection(connectURL,user,password);
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+                )
+        {
+            while(resultSet.next())
+            {
+                String name= resultSet.getString("name");
+                Double price= resultSet.getDouble("price");
+                Integer spicy= resultSet.getInt("spicylevel");
+                Integer calorie= resultSet.getInt("calorie");
+                FoodMenu foodMenu = new FoodMenu(name,price,spicy,calorie);
+                foodMenus.add(foodMenu);
+            }
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+
+
+        return  foodMenus;
+    }
 }
