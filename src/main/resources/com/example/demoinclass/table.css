@@ -1,0 +1,12 @@
+.root{
+   -fx-font-size: 10px;
+}
+.TableColumn{
+    -fx-font-size: 50px;
+}
+.label{
+    -fx-font-size: 20px;
+}
+.table-view{
+    -fx-font-size: 20px;
+}

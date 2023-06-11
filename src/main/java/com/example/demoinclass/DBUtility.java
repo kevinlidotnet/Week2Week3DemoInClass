@@ -104,7 +104,7 @@ public class DBUtility {
     * */
     public static ArrayList<FoodMenu> getFoodMenus(String... sqls) throws SQLException {
         ArrayList<FoodMenu> foodMenus = new ArrayList<>();
-        String sql="SELECT * FROM sql9622349.foodmenu;";
+        String sql="SELECT * FROM foodmenu;";
         if (sqls.length>0) sql=sqls[0];
         try(
                 Connection connection =DriverManager.getConnection(connectURL,user,password);

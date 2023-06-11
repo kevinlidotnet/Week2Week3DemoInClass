@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<AnchorPane prefHeight="449.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demoinclass.FoodMenuTableViewController">
+<AnchorPane prefHeight="503.0" prefWidth="676.0" stylesheets="@table.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demoinclass.FoodMenuTableViewController">
    <children>
-      <BorderPane layoutX="155.0" layoutY="85.0" prefHeight="458.0" prefWidth="702.0" AnchorPane.bottomAnchor="-58.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-102.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutX="155.0" layoutY="85.0" prefHeight="503.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <Label text="Welcome to Tims" BorderPane.alignment="CENTER" />
          </top>
@@ -23,6 +23,9 @@
               </columns>
             </TableView>
          </center>
+         <bottom>
+            <Button fx:id="btnChangeScene" mnemonicParsing="false" onAction="#loadChartView" text="Change to Chart" BorderPane.alignment="CENTER" />
+         </bottom>
       </BorderPane>
    </children>
 </AnchorPane>
