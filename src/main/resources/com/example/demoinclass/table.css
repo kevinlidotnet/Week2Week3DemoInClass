@@ -7,6 +7,15 @@
 .label{
     -fx-font-size: 20px;
 }
+
+.bigButton{
+    -fx-font-size: 50px;
+}
+
+#changeView{
+    -fx-background-color: yellow;
+}
+
 .table-view{
     -fx-font-size: 20px;
 }

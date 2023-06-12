@@ -4,6 +4,7 @@ package com.example.demoinclass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -30,6 +31,8 @@ public class FoodMenuTableViewController implements Initializable {
     @FXML
     private TableView<FoodMenu> foodMenuTableView;
 
+    @FXML
+    private Button btnChangeScene;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -45,6 +48,10 @@ public class FoodMenuTableViewController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        btnChangeScene.getStyleClass().add("bigButton");
+
+
 
     }
 

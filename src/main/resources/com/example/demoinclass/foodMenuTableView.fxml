@@ -24,7 +24,7 @@
             </TableView>
          </center>
          <bottom>
-            <Button fx:id="btnChangeScene" mnemonicParsing="false" onAction="#loadChartView" text="Change to Chart" BorderPane.alignment="CENTER" />
+            <Button id="changeView" fx:id="btnChangeScene" mnemonicParsing="false" onAction="#loadChartView" text="Change to Chart" BorderPane.alignment="CENTER" />
          </bottom>
       </BorderPane>
    </children>
