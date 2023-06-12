@@ -1,12 +1,14 @@
 package com.example.demoinclass;
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -44,5 +46,10 @@ public class FoodMenuTableViewController implements Initializable {
             throw new RuntimeException(e);
         }
 
+    }
+
+    @FXML
+    private  void loadChartView(ActionEvent event) throws IOException{
+        SceneManager.changeScenes(event,"foodMenuChartView.fxml");
     }
 }

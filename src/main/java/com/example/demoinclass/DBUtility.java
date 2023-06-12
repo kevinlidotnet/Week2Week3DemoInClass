@@ -1,18 +1,21 @@
 package com.example.demoinclass;
 
+import javafx.scene.chart.XYChart;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Formatter;
 import java.util.Properties;
 
 public class DBUtility {
     private static String user="admin";
     private static String password="s2023";
-    private static String connectURL ="jdbc:mysql://sql9.freesqldatabase.com:3306/sql9622349";
+    private static String connectURL ="jdbc:mysql://sql9.freesqldatabase.com:3306/sql9623955";
 
     public static  int insertFoodMenu(FoodMenu foodMenu) throws SQLException {
         ResultSet resultSet =null;
@@ -98,9 +101,10 @@ public class DBUtility {
 
     }
 
-    public static ArrayList<FoodMenu> getFoodMenus() throws SQLException {
+    public static ArrayList<FoodMenu> getFoodMenus(String... sqls) throws SQLException {
         ArrayList<FoodMenu> foodMenus = new ArrayList<>();
-        String sql="SELECT * FROM sql9622349.foodmenu;";
+        String sql="SELECT * FROM foodmenu;";
+        if (sqls.length>0) sql=sqls[0];
         try(
                 Connection connection =DriverManager.getConnection(connectURL,user,password);
                 Statement statement = connection.createStatement();
@@ -124,5 +128,46 @@ public class DBUtility {
 
 
         return  foodMenus;
+    }
+
+    /*
+    * Find the top 10 food names with prices
+    * */
+    public static XYChart.Series<String, Double> getTopFoodMenus() {
+        XYChart.Series<String,Double> topFoodSeries = new XYChart.Series<>();
+        topFoodSeries.setName("Price");
+        try {
+            ArrayList<FoodMenu> topFoodMenus = getFoodMenus("SELECT *, price/calorie as cost  FROM sql9623955.foodmenu \n" +
+                    "order by price/calorie\n" +
+                    "limit 10;");
+            for (FoodMenu foodMenu: topFoodMenus
+            ) {
+                topFoodSeries.getData().add(new XYChart.Data<>(foodMenu.getFoodName(),foodMenu.getPrice()));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return topFoodSeries;
+    }
+
+    public static XYChart.Series<String, Double> getTopFoodMenusWithSpicyLevel() {
+        XYChart.Series<String,Double> topFoodSeries = new XYChart.Series<>();
+        topFoodSeries.setName("Spicy Level");
+        try {
+            ArrayList<FoodMenu> topFoodMenus = getFoodMenus("SELECT *, price/calorie as cost  FROM sql9623955.foodmenu \n" +
+                    "order by price/calorie\n" +
+                    "limit 10;");
+            for (FoodMenu foodMenu: topFoodMenus
+            ) {
+                topFoodSeries.getData().add(new XYChart.Data<>(foodMenu.getFoodName(),Double.valueOf( foodMenu.getSpicyLevel())));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return topFoodSeries;
     }
 }
