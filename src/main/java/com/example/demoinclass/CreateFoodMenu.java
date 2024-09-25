@@ -81,7 +81,7 @@ public class CreateFoodMenu implements Initializable {
              catch (Exception e)
              {
                  combSpicyLevel.getEditor().setText(oldValue.toString());
-                 System.out.println(String.format("%s is not a number!",newValue));
+                 System.out.printf("%s is not a number!%n",newValue);
                  txtResult.setText(String.format("%s is not a number!",newValue));
              }
         }));
