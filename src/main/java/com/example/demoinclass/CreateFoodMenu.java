@@ -38,7 +38,7 @@ public class CreateFoodMenu implements Initializable {
     * This method will create the object with the values from the controls
     * */
     public void buttonSaveClicked() throws SQLException {
-        FoodMenu foodMenu = new FoodMenu(txtFoodName.getText(),Double.parseDouble( txtPrice.getText()),combSpicyLevel.getValue());
+        FoodMenu foodMenu = new FoodMenu(txtFoodName.getText(),Double.parseDouble( txtPrice.getText()), Integer.parseInt(String.valueOf(combSpicyLevel.getValue())));
         DBUtility.insertFoodMenu(foodMenu);
         txtResult.setText(foodMenu.toString());
     }
