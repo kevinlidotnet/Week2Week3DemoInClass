@@ -24,9 +24,9 @@ public class DBUtility  {
 //    private static String password=DBCredentials.password;
 
     //my local MySQL
-    //private static String password="s2023";
-    //private static String user="admin";
-    private static String connectURL ="jdbc:mysql://sql9.freesqldatabase.com:3306/sql9622349";
+    //private static String password="student";
+    //private static String user="student";
+    private static String connectURL ="jdbc:mysql://localhost:3306/foodmenu2023";
 
 
 
@@ -37,7 +37,7 @@ public class DBUtility  {
     {
         ArrayList<FoodMenu> foodMenus = new ArrayList<>();
         //query from the database
-        String sql= "SELECT * FROM sql9622349.foodmenu;";
+        String sql= "SELECT * FROM foodmenu2023.foodmenu;";
         try (
                 Connection connection =DriverManager.getConnection(connectURL,user,password);
                 Statement statement = connection.createStatement();
@@ -74,7 +74,7 @@ public class DBUtility  {
         {
 
             for (int i = 0; i < 50; i++) {
-                formatter.format(String.format("INSERT INTO `sql9622349`.`foodmenu`\n" +
+                formatter.format(String.format("INSERT INTO `foodmenu`\n" +
                         "(`name`,`price`,`spicylevel`,`calorie`)\n" +
                         "VALUES('Food%s',%.2f,%d,%d);\n",i,
                         (secureRandom.nextDouble()*40)+5,secureRandom.nextInt(0,4),secureRandom.nextInt(100,9000)));
