@@ -1,7 +1,7 @@
 CREATE TABLE `foodmenu` (
   `idfoodmenu` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `price` decimal(10,0) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
   `spicylevel` int DEFAULT '0',
   `calorie` decimal(10,0) DEFAULT NULL,
   PRIMARY KEY (`idfoodmenu`)
