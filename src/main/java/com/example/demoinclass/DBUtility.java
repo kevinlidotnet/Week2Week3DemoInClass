@@ -10,10 +10,10 @@ import java.sql.*;
 import java.util.*;
 
 public class DBUtility {
-    private static String user="admin";
-    private static String password="s2023";
+    private static String user="student";
+    private static String password="student";
     //private static String connectURL ="jdbc:mysql://sql9.freesqldatabase.com:3306/sql9622349";
-    private static String connectURL ="jdbc:mysql://sql9.freesqldatabase.com:3306/sql9623955";
+    private static String connectURL ="jdbc:mysql://localhost:3306/foodmenu2023";
 
     public static  int insertFoodMenu(FoodMenu foodMenu) throws SQLException {
         ResultSet resultSet =null;
@@ -138,7 +138,7 @@ public class DBUtility {
     public static XYChart.Series<String, Double> getTopFoodMenus()  {
         XYChart.Series<String,Double> topFoodSeries = new XYChart.Series<>();
         try {
-            ArrayList<FoodMenu> topFoodMenus = getFoodMenus("SELECT *, price/calorie as cost  FROM sql9623955.foodmenu \n" +
+            ArrayList<FoodMenu> topFoodMenus = getFoodMenus("SELECT *, price/calorie as cost  FROM foodmenu \n" +
                     "order by price/calorie\n" +
                     "limit 10;");
             for (FoodMenu foodMenu: topFoodMenus
@@ -156,7 +156,7 @@ public class DBUtility {
     public static XYChart.Series<String, Double> getTopFoodMenusWithSpicyLevel()  {
         XYChart.Series<String,Double> topFoodSeries = new XYChart.Series<>();
         try {
-            ArrayList<FoodMenu> topFoodMenus = getFoodMenus("SELECT *, price/calorie as cost  FROM sql9623955.foodmenu \n" +
+            ArrayList<FoodMenu> topFoodMenus = getFoodMenus("SELECT *, price/calorie as cost  FROM foodmenu \n" +
                     "order by price/calorie\n" +
                     "limit 10;");
             for (FoodMenu foodMenu: topFoodMenus
