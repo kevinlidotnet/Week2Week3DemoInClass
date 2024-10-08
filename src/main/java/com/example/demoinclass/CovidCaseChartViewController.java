@@ -1,5 +1,8 @@
 package com.example.demoinclass;
 
+import javafx.beans.Observable;
+import javafx.beans.value.ObservableListValue;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
@@ -40,15 +43,21 @@ public class CovidCaseChartViewController implements Initializable {
 
         toggleGroup.selectedToggleProperty().addListener((observable, oldVal, newVal) ->
                 {
-                    //Clear the view and add the selected data. 
+                    //Clear the view and add the selected data.
                     barChartCovid.getData().clear();
+
                     if (radioAge.isSelected())
                     {
                         boolean b = barChartCovid.getData().addAll(DBUtility.getCasesByAge());
+                        xAxis.setLabel("Group by Age");
                     } else if (radioGender.isSelected()) {
                         boolean g =barChartCovid.getData().addAll(DBUtility.getCasesByGender());
+                        xAxis.setLabel("Group by Gender");
                     } else if (radioMonth.isSelected()) {
                         boolean g =barChartCovid.getData().addAll(DBUtility.getCasesByMonth());
+                        xAxis.setLabel("Group by Month");
+
+
                     }
                 }
         );
