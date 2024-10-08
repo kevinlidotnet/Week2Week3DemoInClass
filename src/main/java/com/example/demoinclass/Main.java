@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("covidCaseChartView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 720, 540);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Food Menu Sunday");
         stage.setScene(scene);
         stage.show();
