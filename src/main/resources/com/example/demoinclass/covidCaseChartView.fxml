@@ -14,12 +14,12 @@
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <center>
-            <BarChart prefHeight="301.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <BarChart fx:id="barChartCovid" prefHeight="301.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <xAxis>
-                <CategoryAxis side="BOTTOM" />
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="barChartCovid" side="LEFT" />
+                <NumberAxis fx:id="yAxis" side="LEFT" />
               </yAxis>
             </BarChart>
          </center>

@@ -171,5 +171,56 @@ public class DBUtility {
         return topFoodSeries;
     }
 
-    //public static
+    //Get cases by age
+
+
+    /*
+     * Get cases by age for the chart
+     * */
+    private static XYChart.Series<String, Integer> getCases(String sql,String group)  {
+        XYChart.Series<String,Integer> ageCases = new XYChart.Series<>();
+        try(
+                Connection connection =DriverManager.getConnection(connectURL,user,password);
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+        )
+        {
+            while(resultSet.next())
+            {
+                String age_group= resultSet.getString(group);
+                Integer cases= resultSet.getInt("cases");
+                ageCases.getData().add(new XYChart.Data<>(age_group,cases));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return ageCases;
+    }
+
+
+    public static XYChart.Series<String, Integer> getCasesByAge() {
+        String sql = "SELECT sum(count) as cases, age_group FROM foodmenu2023.covidcase \n" +
+                "group by age_group\n" +
+                "order by 2 ";
+        String group = "age_group";
+        return  getCases(sql,group);
+    }
+    public static XYChart.Series<String, Integer> getCasesByGender() {
+        String sql = "SELECT sum(count) as cases,gender FROM foodmenu2023.covidcase \n" +
+                "group by gender\n" +
+                "order by 2 ";
+        String group = "gender";
+        return  getCases(sql,group);
+    }
+    public static XYChart.Series<String, Integer> getCasesByMonth() {
+        String sql = "SELECT sum(count) as cases,  \n" +
+                "  EXTRACT(YEAR_MONTH  FROM date) AS month  FROM foodmenu2023.covidcase \n" +
+                "group by month\n" +
+                "order by 2 ";
+        String group = "month";
+        return  getCases(sql,group);
+    }
+
+
+
 }
